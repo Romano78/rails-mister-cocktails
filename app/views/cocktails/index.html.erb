@@ -1,18 +1,19 @@
 <div class="container">
-    <div class="row">
-        <div class="col-8">
-            <% @cocktails.each do |cocktail| %>
-              <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="<%= cocktail.photo_url %>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title"><%= cocktail.name %></h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            <% end %>
+  <div class="index-header-title">
+    <h1>The list of our Cocktails</h1>
+  </div>
+  <div class="index-card-container">
+      <% @cocktails.each do |cocktail| %>
+        <div class="index-card-items">
+          <div 
+            class="
+            index-cocktail-card"style="background-image: url('<%=cocktail.photo_url %>');"  
+          >
+          <h1 class="card-title-name"><%= cocktail.name %></h1>
+          </div>
         </div>
-    </div>
+      <% end %>
+  </div>
 </div>
 
 

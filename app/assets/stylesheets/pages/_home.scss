@@ -1,1 +1,34 @@
 // Specific CSS for your home-page
+
+.home-page-container {
+    background-image: asset-url("index");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.home-page-logo{
+    display: flex;
+    justify-content: center;
+    
+    h1 {
+        height: 300px;
+    }
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#home-search-input {
+    border-radius: 10px;
+    opacity: .8;
+    padding-right: 163px;
+
+    &:hover {
+        opacity: none;
+    }
+}

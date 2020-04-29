@@ -1,0 +1,27 @@
+.index-cocktail-card {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    padding: 38px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+
+    h1 {
+        color: white;
+        display: grid;
+        place-items: center;
+        height: 228px;
+    }
+}
+
+.index-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 45px;
+}
+
+.index-card-items {
+    padding-bottom: 34px;
+}

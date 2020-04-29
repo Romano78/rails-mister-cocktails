@@ -7,29 +7,33 @@ ingredient_serialized = open(url).read
 ingredients = JSON.parse(ingredient_serialized)
 
 
-puts "Deleting all"
+puts "Deleting all Ingredient"
 
-Cocktail.destroy_all
 Ingredient.destroy_all
 
 puts "Creating Ingredients"
 
 10.times do 
     Ingredient.create!(
-        name: ingredients["drinks"][0...40].sample
+        name: ingredients["drinks"][0...100].sample
     )
 
 end
 
-puts "Creating Cocktails"
+puts "Deleting Cocktails"
+
+
+Cocktail.destroy_all
 
 
 puts "Creaking Cocktail"
 
+10.times do
+    Cocktail.create(
+        name: Faker::TvShows::SouthPark.character,
+        photo_url: "https://source.unsplash.com/1600x900/?cocktails"
+    )
+end
 
-Cocktail.create(
-    name: Faker::TvShows::SouthPark.character,
-    photo_url: "https://source.unsplash.com/1600x900/?cocktails"
-)
 
 puts "done"
