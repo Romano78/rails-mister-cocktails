@@ -1,12 +1,28 @@
-#show-card-container {
-    height: 400px;
-    width: 500px;
+.show-content-details  {
+
+    border: 1px solid red;
+
+    img {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.show-content-ingredients {
+    height: 250px;
+    width:  100%;
     border: 1px solid red;
 }
 
-
-.show-ingredient {
-    height: 200px;
-    width: 200px;
+.show-content-description {
     border: 1px solid red;
+    height: 200px;
+
 }
