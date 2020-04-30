@@ -4,6 +4,7 @@
   </div>
   <div class="row" style="justify-content: space-between">
     <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path((cocktail)), class: "card-link", :action => 'go' do %>
       <div class="index-card-container">
         <div class="col-12 col-md-12 col-lg-4">
           <div class="index-card-title">
@@ -21,12 +22,16 @@
                 <li>Sugar</li> %>
               </ul>
             <% end %>
-            <div class="rating">
-              <p>⭐⭐⭐⭐</p>
-            </div>
+          </div>
+          <div class="rating">
+          <% if cocktail.rating %>
+            <p> <%=  '⭐' * cocktail.rating %> </p> 
+          <% end %>
           </div>
         </div>
       </div>
+
+      <% end %>
     <% end %>
   </div>
 </div>

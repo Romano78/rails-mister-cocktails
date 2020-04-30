@@ -1,0 +1,18 @@
+.index-list-btn-add {
+    text-decoration: none;
+    color: white;
+    padding-right: 13px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    /* text-align: center; */
+    background-color: #4ed3d1;
+    padding-top: 10px;
+    border-radius: 4px;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #26a7c1;
+        color: white;
+
+    }
+}

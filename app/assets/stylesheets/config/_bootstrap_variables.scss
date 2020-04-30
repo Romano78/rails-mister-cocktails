@@ -5,6 +5,8 @@
 
 
 $body-color: white;
+$body-font: monospace;
+$headers-font: monospace;
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
@@ -26,6 +28,8 @@ $border-radius-sm: 2px;
 
 // Override other variables below!
 
+
+
 // For the show page container 
 #show-container {
     min-height: 100vh;
@@ -39,4 +43,8 @@ $border-radius-sm: 2px;
     min-height: 100vh;
     padding: 20px;
 
+}
+
+#container-doses-new {
+    min-height: 100vh;
 }

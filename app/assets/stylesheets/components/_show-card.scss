@@ -1,7 +1,8 @@
 .show-content-details  {
-
-    border: 1px solid red;
-
+    margin-top: 28px;
+    background: whitesmoke;
+    margin-bottom: 80px;
+    padding: 10px;
     img {
         background-size: cover;
         background-position: center;
@@ -10,19 +11,56 @@
     }
     
     h1 {
-        text-align: center;
         font-size: 30px;
     }
+}
+
+.show-content-details-body {
+    padding: 10px;
+
+}
+
+.show-content-title {
+    text-align: center;
+    padding-bottom: 21px;
 }
 
 .show-content-ingredients {
     height: 250px;
     width:  100%;
-    border: 1px solid red;
 }
 
 .show-content-description {
-    border: 1px solid red;
-    height: 200px;
+    padding: 10px;
+    height: 336px;
+    margin-top: 45px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 
 }
+
+.index-list-btn {
+    text-decoration: none;
+    color: lightgray;
+
+    &:hover {
+        text-decoration: none;
+        color: darkgrey;
+    }
+    
+}
+
+.show-ingredient-list {
+    height: 221px;
+    overflow: hidden;
+}
+
+.show-ingredient-list p {
+    color: gray;
+}
+
+.show-ingredient-btn {
+    // position: absolute;
+    // top: 254px;
+}
+
+// height: 136px;
