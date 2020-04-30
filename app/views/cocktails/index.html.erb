@@ -1,18 +1,33 @@
-<div class="container">
-  <div class="index-header-title">
+<div class="container" id="index-container">
+  <div class="index-header-title mb-2">
     <h1>The list of our Cocktails</h1>
   </div>
-  <div class="index-card-container">
-      <% @cocktails.each do |cocktail| %>
-        <div class="index-card-items">
-          <div 
-            class="
-            index-cocktail-card"style="background-image: url('<%=cocktail.photo_url %>');"  
-          >
-          <h1 class="card-title-name"><%= cocktail.name %></h1>
+  <div class="row" style="justify-content: space-between">
+    <% @cocktails.each do |cocktail| %>
+      <div class="index-card-container">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="index-card-title">
+            <h1><%= cocktail.name %></h1>
+          </div>
+          <div class="index-card-ingredient">
+            <% cocktail.ingredients.each do |ingredient| %>
+              <ul class="ingredient-list">
+                <li><%= ingredient.name %></li>
+                <%# <li>Wather</li>
+                <li>Sugar</li>
+                <li>Sugar</li>
+                <li>Sugar</li>
+                <li>Sugar</li>
+                <li>Sugar</li> %>
+              </ul>
+            <% end %>
+            <div class="rating">
+              <p>⭐⭐⭐⭐</p>
+            </div>
           </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 

@@ -11,8 +11,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Create Cocktail", "#", class: "nav-link btn-success" %>
+        <%= link_to "Create Cocktail", new_cocktail_path, class: "nav-link btn-success" %>
       </li>
+      <li class="nav-item">
+        <%= link_to "All Cocktails", cocktails_path, class: "nav-link" %>
+      </li> 
       <li class="nav-item">
         <%= link_to "Home", "/", class: "nav-link" %>
       </li> 

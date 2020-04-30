@@ -1,27 +1,49 @@
-.index-cocktail-card {
-    height: 300px;
-    width: 300px;
+.index-card-container {
+    height: 200px;
+    width: 340px;
+    margin-bottom: 30px;
+    padding-left: 8px;
     background-size: cover;
-    padding: 38px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://source.unsplash.com/1600x900/?cocktail");
 
     h1 {
         color: white;
-        display: grid;
-        place-items: center;
-        height: 228px;
+        font-size: 30px;
     }
 }
 
-.index-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 45px;
+.index-card-title {
+    width: 300px;
+    padding-bottom: 7px;
+    padding-top: 23px;
 }
 
-.index-card-items {
-    padding-bottom: 34px;
+.index-header-title {
+    margin-bottom: 29px;
+}
+
+.ingredient-list {
+    margin-left: -22px;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    li {
+        color: white;
+    }
+}
+
+.index-card-ingredient {
+    display: flex;
+    align-items: end;
+    width: 313px;
+    height: 99px;
+    overflow: hidden;
+
+    .rating {
+        position: relative;
+        left: -6px;
+        top: 81px;
+        color: white;
+    }
 }
