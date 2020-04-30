@@ -39,6 +39,7 @@ puts "Creaking Cocktail"
 3.times do
     Cocktail.create(
         name: Faker::TvShows::SouthPark.character,
+        rating: rand(1...5),
         photo_url: "https://source.unsplash.com/1600x900/?cocktails"
     )
 end
