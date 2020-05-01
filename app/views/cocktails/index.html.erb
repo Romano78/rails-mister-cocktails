@@ -2,7 +2,9 @@
   <div class="index-header-title mb-2">
     <h1>The list of our Cocktails</h1>
   </div>
+
   <div class="row" style="justify-content: space-between">
+
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path((cocktail)), class: "card-link", :action => 'go' do %>
       <div class="index-card-container">
@@ -33,6 +35,7 @@
 
       <% end %>
     <% end %>
+
   </div>
 </div>
 

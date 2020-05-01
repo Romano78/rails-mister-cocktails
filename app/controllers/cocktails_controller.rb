@@ -3,7 +3,13 @@ class CocktailsController < ApplicationController
 
 
     def index()
-        @cocktails = Cocktail.all
+        if params[:search].present?
+            @search = params[:search]
+            @cocktails = Cocktail.where("name iLike '%#{params[:search][:query]}%'")
+            
+        else
+         @cocktails = Cocktail.all
+        end
     end
 
     def new()
