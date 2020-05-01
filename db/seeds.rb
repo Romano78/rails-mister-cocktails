@@ -22,7 +22,7 @@ end
 
 puts "Creating Ingredients"
 
-50.times do 
+15.times do 
    ingredient = Ingredient.create!(
         name: ingredient_list.sample
     )
@@ -36,7 +36,7 @@ puts "Deleting Cocktails"
 Cocktail.destroy_all
 
 puts "Creaking Cocktail"
-3.times do
+10.times do
     Cocktail.create(
         name: Faker::TvShows::SouthPark.character,
         rating: rand(1...5),

@@ -22,7 +22,7 @@ class CocktailsController < ApplicationController
 
 
     def show()
-        @Dose = Dose.new
+        @dose = Dose.new
     end
 
 

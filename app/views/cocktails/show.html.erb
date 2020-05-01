@@ -23,12 +23,16 @@
 
                 <%  @cocktail.doses.each do |dose| %>
                     <p><%= dose.ingredient.name %> - <%= dose.description %>
-                        <%= link_to "(delete)", new_cocktail_dose_path(@cocktail), class: "index-list-btn" %>
+                        <%= link_to "(delete)", dose_path(dose),
+                         method: :delete ,
+                        data: { confirm: "Are you sure?" } ,
+                        class: "index-list-btn" %>
                     </p>
                 <%end %>
             </div>
                <div class="show-ingredient-btn">
-                <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "index-list-btn-add"%>
+                <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail),
+                class: "index-list-btn-add"%>
                </div>
               </div>
         </div>
