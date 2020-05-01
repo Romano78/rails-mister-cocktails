@@ -1,12 +1,15 @@
+
+<div class="banner">
+    <div class="container">
+        <h1><%= @cocktail.name %></h1>
+    </div>
+</div>
+
 <div class="container" id="show-container">
     <div class="row">
         <div class="col-12 col-lg-8">
             <div class="show-content-details">
-                <%= image_tag "Mojito" %>
                  <div class="show-content-details-body">
-                    <div class="show-content-title">
-                        <h1><%= @cocktail.name %></h1>
-                    </div>
                     <div class="show-content-body">
                         <h1>Description:</h1>
                         <p><%= @cocktail.description %></p>
@@ -15,26 +18,42 @@
             </div>
         </div>
         <div class="col-12 col-lg-4">
-        <div class="show-content-description">
-            <div class="title">
-                <h1>Ingredients:</h1>
+            <div class="show-content-description">
+                <div class="title">
+                    <h1>Ingredients:</h1>
+                </div>
+                <div class="show-ingredient-list">
+                    <%  @cocktail.doses.each do |dose| %>
+                        <p><%= dose.ingredient.name %> - <%= dose.description %>
+                            <%= link_to "(delete)", dose_path(dose),
+                            method: :delete ,
+                            data: { confirm: "Are you sure?" } ,
+                            class: "index-list-btn" %>
+                        </p>
+                    <%end %>
+                </div>
+                <div class="show-ingredient-btn">
+                    <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail),
+                    class: "index-list-btn-add"%>
+                </div>
             </div>
-            <div class="show-ingredient-list">
-
-                <%  @cocktail.doses.each do |dose| %>
-                    <p><%= dose.ingredient.name %> - <%= dose.description %>
-                        <%= link_to "(delete)", dose_path(dose),
-                         method: :delete ,
-                        data: { confirm: "Are you sure?" } ,
-                        class: "index-list-btn" %>
-                    </p>
-                <%end %>
+        </div>
+        <div class="col-12">
+            <div class="show-content-review">
+                <div class="title">
+                    <h1>Reviews:</h1>
+                </div>
+                <div class="show-review-list">
+                    <%  @cocktail.reviews.each do |review| %>
+                        <p><%= review.content %>
+                        </p>
+                    <%end %>
+                </div>
+                <div class="show-review-btn">
+                    <%= link_to "Add Review", new_cocktail_review_path(@cocktail),
+                    class: "index-list-btn-add"%>
+                </div>
             </div>
-               <div class="show-ingredient-btn">
-                <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail),
-                class: "index-list-btn-add"%>
-               </div>
-              </div>
         </div>
     </div>
 </div>
