@@ -1,18 +1,6 @@
 .show-content-details  {
-    margin-top: 28px;
-    background: whitesmoke;
     margin-bottom: 80px;
     padding: 10px;
-    img {
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: auto;
-    }
-    
-    h1 {
-        font-size: 30px;
-    }
 }
 
 .show-content-details-body {
@@ -33,9 +21,6 @@
 .show-content-description {
     padding: 10px;
     height: 336px;
-    margin-top: 45px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-
 }
 
 .index-list-btn {
@@ -50,7 +35,6 @@
 }
 
 .show-ingredient-list {
-    height: 221px;
     overflow: hidden;
 }
 
@@ -58,9 +42,11 @@
     color: gray;
 }
 
-.show-ingredient-btn {
-    // position: absolute;
-    // top: 254px;
+
+.show-content-review {
+    margin-bottom: 100px;
+    height: 350px;
+    overflow: hidden;
 }
 
-// height: 136px;
+

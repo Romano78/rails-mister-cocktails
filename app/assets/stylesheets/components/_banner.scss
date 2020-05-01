@@ -1,9 +1,12 @@
 .banner {
     background-size: cover;
     background-position: center;
-    padding: 100px 0;
+    padding: 132px 0;
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
-    url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);
+    asset_url("Mojito");
+      h1 {
+        text-align: center;
+      }
   }
   
   .banner h1 {

@@ -1,0 +1,10 @@
+<div class="container" id="new-review-container">
+    <div class="new-form-content mt-3">
+        <%= simple_form_for [@cocktail, @review] do |f| %>
+        <%= f.input :content %>
+        
+        
+        <%= f.submit class: "index-list-btn-add"%>
+        <% end %>
+    </div>
+</div>
