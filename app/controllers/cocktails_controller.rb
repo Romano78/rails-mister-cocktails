@@ -9,7 +9,7 @@ class CocktailsController < ApplicationController
             
         else
          @cocktails = Cocktail.all
-        end
+        end      
     end
 
     def new()
@@ -28,6 +28,9 @@ class CocktailsController < ApplicationController
 
 
     def show()
+        if @cocktail.photo.present?
+        @photo = "#{@cocktail.photo.key}.jpg"
+        end
         @dose = Dose.new
     end
 
@@ -35,7 +38,7 @@ class CocktailsController < ApplicationController
     private 
 
     def cocktail_params()
-        params.require(:cocktail).permit(:name, :description, :rating)
+        params.require(:cocktail).permit(:name, :description, :rating, :photo)
     end
     
     def find_cocktail()
